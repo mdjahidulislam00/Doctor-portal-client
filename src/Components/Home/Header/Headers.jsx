@@ -1,8 +1,8 @@
 import headerImage from '../../../assets/images/chair.png'
 import headerBgImage from '../../../assets/images/bg.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ChemberInfoCard from './chemberInfoCard/ChemberInfoCard'
 import {FaClock, FaLocationDot, FaPhone } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const Headers = () => {
     const chamberInfo =[
@@ -39,7 +39,7 @@ const Headers = () => {
                      Voluptates, rerum! Consectetur maiores possimus,
                       ducimus nisi modi repellendus numquam aliquam quidem
                 .</p>
-                <button className='w-48 py-4 rounded-md text-lg text-white bg-pink-400 font-semibold hover:bg-pink-500'>GET APPOINTMENT</button>
+              <Link to='appointment'>  <button className='w-48 py-4 rounded-md text-lg text-white bg-pink-400 font-semibold hover:bg-pink-500'>GET APPOINTMENT</button></Link>
             </div>
             <div className="basis-6/12 p-2 rounded-lg">
                 <img src={headerImage} alt="Chair Image" />
