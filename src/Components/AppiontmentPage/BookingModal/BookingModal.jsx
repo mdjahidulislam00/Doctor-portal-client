@@ -22,8 +22,8 @@ const onSubmit = (data) =>{
     const Data = await res.json()
       alert('Appointment Successfully Submitted') 
       setShowModal(false);
-      reset();
       setBookingFromData(Data)
+      reset();
   }
   fetchData()
 }

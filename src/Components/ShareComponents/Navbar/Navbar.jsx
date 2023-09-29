@@ -1,7 +1,11 @@
-import  { useState } from "react";
+import  { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { currentUser } from "../../../App";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLogInUser, setCurrentLogInUser] = useContext(currentUser);
+  console.log(currentLogInUser)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -24,14 +28,14 @@ const Navbar = () => {
             Dental Services 
           </button>
           <button  className="text-white hover:text-gray-200">
-            Reviews
-          </button>
-          <button  className="text-white hover:text-gray-200">
             Blog
           </button>
           <button  className="text-white hover:text-gray-200">
             Contract
           </button>
+          <Link to='logIn' > <button  className="text-pink-400 font-semibold bg-white p-2 rounded hover:bg-gray-200 hover:text-pink-500">
+            {currentLogInUser ? 'LogOut' : 'LogIn'}
+          </button></Link>
         </div>
         <div className="md:hidden flex items-center">
           <button

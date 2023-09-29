@@ -3,7 +3,7 @@ import BookingModal from "../BookingModal/BookingModal"
 
 
 const AppointmentSheduleCard = ({time, value}) => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState();
 
   const handleBookAppointment = () => {
     setShowModal(true)
